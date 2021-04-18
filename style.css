@@ -6,8 +6,8 @@ html {
 	scroll-behavior: smooth;
 	--bg: #eee6e4;
 	--black: #222221;
-	--bold: #372459;
-	--bold1: #e8f6ff;
+	--bold: #689689;
+	--bold1: #E3D4CA;
 }
 body {
 	background-color: var(--bg);
@@ -20,7 +20,7 @@ h1, h2, h3 {
 h1 {
 	color: var(--bold);
 	font-size: 3rem;
-	line-height: 4.8rem;
+	line-height: 4rem;
 }
 h2 {
 	font-size: 2rem;
@@ -33,13 +33,14 @@ h3 {
 p, a {
 	font-size: 1rem;
 	line-height: 1.6rem;
+	font-family: 'Noto Serif', serif;
 }
 a {
 	color: inherit;
 	text-decoration: none;
 }
 section {
-	padding: 5rem 1rem;
+	padding: 4rem 1rem;
 }
 main {
 	max-width: 1200px;
@@ -47,10 +48,10 @@ main {
 }
 ::selection {
 	background-color: var(--bold);
-	color: var(--bg);
+	color: var(--bold1);
 }
 span.color-bg {
-	background: linear-gradient(0deg, var(--bold1) 60%, rgba(0,0,0,0) 21%);
+	background: linear-gradient(0deg, var(--bold) 40%, rgba(0,0,0,0) 0%);
 }
 
 header {
@@ -77,10 +78,11 @@ header nav {
 	grid-template-columns: 1fr 1fr 1fr;
 	justify-content: center;
 	align-items: center;
-	gap: 5rem;
+	gap: 5vw;
 }
 nav .link {
 	padding: 1rem;
+	box-sizing: border-box;
 	width: 100%;
 
 	border: 1px solid var(--black);
@@ -123,7 +125,7 @@ nav .link:hover {
 	gap: 1rem;
 }
 .question {
-	padding: 1rem;
+	padding: 0.6rem;
 	box-shadow: -10px 10px 0px var(--black);
 
 	border: 1px solid var(--black);
@@ -148,8 +150,8 @@ nav .link:hover {
 }
 .servicos-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 1rem;
+	grid-template-columns: 1fr 1.2fr 1fr;
+	gap: 2rem;
 }
 .servico {
 	padding: 1rem;
@@ -165,7 +167,7 @@ nav .link:hover {
 	color: var(--bold1);
 }
 .servico a {
-	width: 40%;
+	width: 50%;
 	margin-top: .5rem;
 	display: block;
 
@@ -178,6 +180,44 @@ nav .link:hover {
 	box-shadow: 0px 0px 0px var(--black);
 	transform: translateX(-5px) translateY(5px);
 	background-color: var(--bold1);
+	color: var(--black);
+}
+
+.contato h2 {
+	margin-bottom: 2rem;
+}
+.contato-grid {
+	display: grid;
+	grid-template-columns: 1fr 1.3fr;
+}
+.information {
+	padding: 0.6rem;
+	margin-bottom: 2rem;
+
+	display: flex;
+	align-items: center;
+
+	background-color: var(--bold1);
+	border-radius: 10px;
+	border: 1px solid var(--black);
+	box-shadow: -10px 10px 0px var(--black);
+}
+.information button {
+	margin-left: 2rem;
+	padding: 0.1rem 0.3rem;
+
+	background-color: var(--bold1);
+	text-align: center;
+	border: 1px solid var(--black);
+	box-shadow: -5px 5px 0px var(--black);
+	transition: .3s all;
+
+	font-size: 1rem;
+}
+.information button:hover {
+	box-shadow: 0px 0px 0px var(--black);
+	transform: translateX(-5px) translateY(5px);
+	background-color: var(--bold);
 	color: var(--black);
 }
 
@@ -209,5 +249,25 @@ nav .link:hover {
 
 	.questions-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.servicos-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.contato-grid {
+		grid-template-columns: 1fr;
+	}
+	.contato-grid img {
+		width: 90%;
+	}
+	.information {
+		box-sizing: border-box;
+
+		flex-direction: column;
+	}
+	.information button {
+		margin-left: 0;
+		margin-top: 1rem;
 	}
 }
